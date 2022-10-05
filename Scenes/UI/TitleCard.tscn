@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/TitleCard.cs" type="Script" id=1]
+[ext_resource path="res://Assets/background.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/TitleCard/logo.png" type="Texture" id=3]
+[ext_resource path="res://Animations/PlayerAnim.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://UserInterface/Themes.tres" type="Theme" id=5]
+[ext_resource path="res://UserInterface/new_dynamicfont.tres" type="DynamicFont" id=6]
+
+[node name="Control" type="Node2D"]
+script = ExtResource( 1 )
+pathButtonPlay = NodePath("VBoxContainer/Button_play")
+pathButtonQuit = NodePath("VBoxContainer/Button_quit")
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 491, 265 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 502, 117 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 502, 510 )
+frames = ExtResource( 4 )
+animation = "Walk"
+frame = 8
+playing = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 381.0
+margin_top = 226.0
+margin_right = 631.0
+margin_bottom = 348.0
+
+[node name="Button_play" type="Button" parent="VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 59.0
+theme = ExtResource( 5 )
+custom_colors/font_color_disabled = Color( 1, 0.0627451, 0.0627451, 1 )
+custom_colors/font_color_focus = Color( 0.85098, 0.133333, 0.133333, 1 )
+custom_colors/font_color = Color( 0.32549, 0.721569, 0.294118, 1 )
+custom_colors/font_color_hover = Color( 0.972549, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.619608, 0.152941, 0.152941, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "PLAY"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button_quit" type="Button" parent="VBoxContainer"]
+margin_top = 63.0
+margin_right = 250.0
+margin_bottom = 122.0
+theme = ExtResource( 5 )
+custom_colors/font_color = Color( 0.32549, 0.721569, 0.294118, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "QUIT"
