@@ -149,11 +149,5 @@ namespace Correction.Scripts
             if(jumpCapacity < maxJumpCapacity)
                 jumpCapacity += shrinkFactor * jumpCapacity;
         }
-    
-        void OnCollectibleAte(Node pBody, Area2D pItem)
-        {
-            pItem.QueueFree();
-        }
-    
     }
 }
