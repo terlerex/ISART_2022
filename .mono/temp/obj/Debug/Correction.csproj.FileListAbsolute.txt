@@ -1,0 +1,9 @@
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\bin\Debug\Correction.dll
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\bin\Debug\Correction.pdb
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\obj\Debug\Correction.csproj.AssemblyReference.cache
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\obj\Debug\Correction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\obj\Debug\Correction.AssemblyInfoInputs.cache
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\obj\Debug\Correction.AssemblyInfo.cs
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\obj\Debug\Correction.csproj.CoreCompileInputs.cache
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\obj\Debug\Correction.dll
+C:\Users\UHCGA\OneDrive\Bureau\ProjetVierge\.mono\temp\obj\Debug\Correction.pdb

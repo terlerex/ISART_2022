@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Platform1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Platform2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Platform3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/background.jpg" type="Texture" id=5]
+[ext_resource path="res://Scenes/Collectibles/Burgers.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Collectibles/Fish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/Main.cs" type="Script" id=9]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 9 )
+playerPath = NodePath("GameContainer/Player")
+burgerPath = NodePath("GameContainer/Collectables/Burgers")
+fishPath = NodePath("GameContainer/Collectables/Fish")
+
+[node name="Backgrounds" type="Node2D" parent="."]
+position = Vector2( -642, -328 )
+scale = Vector2( 1.92, 1.92 )
+
+[node name="Background" type="Sprite" parent="Backgrounds"]
+position = Vector2( 610.938, 362.5 )
+scale = Vector2( 0.401389, 0.284859 )
+texture = ExtResource( 5 )
+
+[node name="GameContainer" type="Node2D" parent="."]
+
+[node name="PlatformsContainer" type="Node2D" parent="GameContainer"]
+
+[node name="StaticBody2D" parent="GameContainer/PlatformsContainer" instance=ExtResource( 2 )]
+position = Vector2( 335, 415 )
+
+[node name="StaticBody2D2" parent="GameContainer/PlatformsContainer" instance=ExtResource( 2 )]
+position = Vector2( 617, 378 )
+
+[node name="StaticBody2D3" parent="GameContainer/PlatformsContainer" instance=ExtResource( 4 )]
+position = Vector2( 172, 536 )
+
+[node name="StaticBody2D4" parent="GameContainer/PlatformsContainer" instance=ExtResource( 4 )]
+position = Vector2( 872, 536 )
+rotation = 3.14159
+scale = Vector2( 0.920005, -1 )
+
+[node name="StaticBody2D5" parent="GameContainer/PlatformsContainer" instance=ExtResource( 2 )]
+position = Vector2( 445, 596 )
+
+[node name="StaticBody2D6" parent="GameContainer/PlatformsContainer" instance=ExtResource( 2 )]
+position = Vector2( 641, 595 )
+
+[node name="StaticBody2D7" parent="GameContainer/PlatformsContainer" instance=ExtResource( 3 )]
+position = Vector2( 458, 236 )
+
+[node name="StaticBody2D8" parent="GameContainer/PlatformsContainer" instance=ExtResource( 2 )]
+position = Vector2( 33, 401 )
+rotation = -1.58663
+
+[node name="StaticBody2D9" parent="GameContainer/PlatformsContainer" instance=ExtResource( 2 )]
+position = Vector2( 997, 417 )
+rotation = 1.58052
+
+[node name="Collectables" type="Node2D" parent="GameContainer"]
+
+[node name="Burgers" type="Node2D" parent="GameContainer/Collectables"]
+
+[node name="Burgers" parent="GameContainer/Collectables/Burgers" instance=ExtResource( 6 )]
+position = Vector2( 407, 360 )
+
+[node name="Burgers2" parent="GameContainer/Collectables/Burgers" instance=ExtResource( 6 )]
+position = Vector2( 564, 328 )
+
+[node name="Burgers3" parent="GameContainer/Collectables/Burgers" instance=ExtResource( 6 )]
+position = Vector2( 102, 470 )
+
+[node name="Burgers4" parent="GameContainer/Collectables/Burgers" instance=ExtResource( 6 )]
+position = Vector2( 457, 190 )
+
+[node name="Burgers5" parent="GameContainer/Collectables/Burgers" instance=ExtResource( 6 )]
+position = Vector2( 922, 466 )
+
+[node name="Fish" type="Node2D" parent="GameContainer/Collectables"]
+
+[node name="Fish" parent="GameContainer/Collectables/Fish" instance=ExtResource( 7 )]
+position = Vector2( 666, 329 )
+
+[node name="Fish2" parent="GameContainer/Collectables/Fish" instance=ExtResource( 7 )]
+position = Vector2( 269, 363 )
+
+[node name="Fish3" parent="GameContainer/Collectables/Fish" instance=ExtResource( 7 )]
+position = Vector2( 765, 537 )
+
+[node name="Fish4" parent="GameContainer/Collectables/Fish" instance=ExtResource( 7 )]
+position = Vector2( 697, 537 )
+
+[node name="Player" parent="GameContainer" instance=ExtResource( 1 )]
+position = Vector2( 519, 541 )
+script = null
+
+[node name="ForeGround" type="Node2D" parent="GameContainer"]
+
+[node name="ScreenBorders" type="Node2D" parent="GameContainer"]
+position = Vector2( 363, 550 )
